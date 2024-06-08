@@ -9,14 +9,14 @@ class RecommendationService:
         """
         Initialize the RecommendationService with the configuration parameters.
         """
-        self.min_scale = Config.MIN_SCALE
-        self.max_scale = Config.MAX_SCALE
-        self.impact_score_weight = Config.IMPACT_SCORE_WEIGHT
-        self.preference_bonus_weight = Config.PREFERENCE_BONUS_WEIGHT
-        self.completed_count_weight = Config.COMPLETED_COUNT_WEIGHT
-        self.agreed_count_weight = Config.AGREED_COUNT_WEIGHT
-        self.showed_count_weight = Config.SHOWED_COUNT_WEIGHT
-        self.test_size = Config.RECCOMENDATIONS_TEST_SIZE
+        self.min_scale = Config.RECOMMENDATION_MIN_SCALE
+        self.max_scale = Config.RECOMMENDATION_MAX_SCALE
+        self.impact_score_weight = Config.RECOMMENDATION_IMPACT_SCORE_WEIGHT
+        self.preference_bonus_weight = Config.RECOMMENDATION_PREFERENCE_BONUS_WEIGHT
+        self.completed_count_weight = Config.RECOMMENDATION_COMPLETED_COUNT_WEIGHT
+        self.agreed_count_weight = Config.RECOMMENDATION_AGREED_COUNT_WEIGHT
+        self.showed_count_weight = Config.RECOMMENDATION_SHOWED_COUNT_WEIGHT
+        self.test_size = Config.RECCOMENDATION_TEST_SIZE
     
     def _scale_score(self, score):
         """

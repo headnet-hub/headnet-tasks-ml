@@ -9,10 +9,10 @@ class MoodAnalyzerService:
         """
         Initialize the MoodAnalyzerService with the parameters for the RandomForestRegressor and analysis settings.
         """
-        self.n_estimators = Config.N_ESTIMATORS
-        self.random_state = Config.RANDOM_STATE
-        self.test_size = Config.TEST_SIZE
-        self.threshold_importance = Config.TRESHOLD_IMPORTANCE
+        self.n_estimators = Config.MOOD_ANALYZER_N_ESTIMATORS
+        self.random_state = Config.MOOD_ANALYZER_RANDOM_STATE
+        self.test_size = Config.MOOD_ANALYZER_TEST_SIZE
+        self.threshold_importance = Config.MOOD_ANALYZER_TRESHOLD_IMPORTANCE
         self.rf_model = RandomForestRegressor(n_estimators=self.n_estimators, random_state=self.random_state)
         
     def _prepare_data(self, df):

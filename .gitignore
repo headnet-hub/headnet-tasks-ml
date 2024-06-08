@@ -1,2 +1,3 @@
 notebooks/
 .DS_Store
+core/private_config.py

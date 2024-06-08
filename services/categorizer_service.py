@@ -1,15 +1,16 @@
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 from core.config import Config
+from core.private_config import PrivateConfig
 
 class CategorizerService:
     def __init__(self):
         """
         Initialize the CategorizerService with the model name, authorization token, and classification threshold.
         """
-        self.model_name = Config.MODEL_NAME
-        self.auth_token = Config.AUTH_TOKEN
-        self.threshold_classification = Config.TRESHOLD_CLASSIFICATION
+        self.model_name = Config.CATEGORIZER_MODEL_NAME
+        self.auth_token = PrivateConfig.CATEGORIZER_AUTH_TOKEN
+        self.threshold_classification = Config.CATEGORIZER_TRESHOLD_CLASSIFICATION
         self.tokenizer = None
         self.model = None
 
